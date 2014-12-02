@@ -105,9 +105,10 @@ class Profile(object):
             'list_mfa_devices_result',
             'mfa_devices'))
 
-        self.mfa_serial_number = mfa_device.serial_number\
-            if mfa_device\
-            else None
+        self.mfa_serial_number = None
+        # mfa_device.serial_number\
+        #     if mfa_device\
+        #     else None
 
     def _prompt_token(self):
         if self.otp:
